@@ -45,14 +45,13 @@
 	
 	<main>
 		<section>
-		<?php
-				foreach ($filmes as $i => $f) { ?>
-					<article>
-						<a href="filme.php?id=<?= $i ?>">
-							<img src="./assets/img/cartazes/cartaz-<?= $i ?>.png" alt="<?= $f['título'] ?>">
-							<span>Ver +</span>
-						</a>
-					</article>
+			<?php foreach ($filmesFiltrados as $i => $f) { ?>
+				<article>
+				<a href="filme.php?id=<?= $i ?>">
+					<img src="./assets/img/cartazes/cartaz-<?= $i ?>.png" alt="<?= $f['título'] ?>">
+					<span>Ver +</span>
+				</a>
+			</article>
 			<?php } ?>
 		</section>
 	</main>
