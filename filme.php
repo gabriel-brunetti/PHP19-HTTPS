@@ -1,3 +1,7 @@
+<?php
+	include('./includes/generos.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,11 +19,11 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href="#">Gênero 1</a></li>
-			<li><a href="#">Gênero 2</a></li>
-			<li><a href="#">Gênero 3</a></li>
-			<li><a href="#">Gênero 4</a></li>
-			<li><a href="#">Gênero 5</a></li>
+			<?php
+				foreach ($generos as $g) {
+					echo('<li><a href="#">'.$g.'</a></li>');
+				}
+			?>
 		</ul>
 		<form>
 			<input type="text" name="trecho"><button type="submit">Buscar</button>
